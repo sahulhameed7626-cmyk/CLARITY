@@ -27,6 +27,8 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+const { questionBank, findExactOrFuzzyMatch } = require('./questionBank');
+
 const JWT_SECRET = process.env.JWT_SECRET || 'CLARITY_super_secret_jwt_key_2026_clarity';
 const PORT = process.env.PORT || 5000;
 
@@ -445,6 +447,11 @@ async function performRealTimeWebSearch(userQuestion, courseName) {
 }
 
 function generateEducationalAnswer(question, courseName, questionType, searchResults) {
+  const matched = findExactOrFuzzyMatch(question, courseName);
+  if (matched) {
+    return `### Answer: ${matched.question}\n\n**Category:** ${matched.category}\n\n**Answer:** ${matched.answer}\n\n### Key Educational Takeaways\n- Foundational concept in **${matched.category}**.\n- Crucial for competitive exams, university coursework, and technical interview preparation.\n- Practice hands-on problems and interactive roadmaps on CLARITY.`;
+  }
+
   const topic = question.replace(/what is a?/gi, '').replace(/explain/gi, '').trim() || courseName;
 
   if (questionType === 'COMPARISON') {

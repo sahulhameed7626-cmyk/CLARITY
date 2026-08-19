@@ -1,0 +1,2068 @@
+const questionBank = [
+  // ==========================================
+  // 1. C PROGRAMMING (50 Q&A)
+  // ==========================================
+  {
+    category: "C Programming",
+    question: "What is C?",
+    answer: "C is a general-purpose programming language widely used for system programming, embedded systems, and application development."
+  },
+  {
+    category: "C Programming",
+    question: "Who developed C?",
+    answer: "Dennis Ritchie developed C at Bell Laboratories in the early 1970s."
+  },
+  {
+    category: "C Programming",
+    question: "What is a variable in C?",
+    answer: "A variable is a named memory location used to store a value that can change during program execution."
+  },
+  {
+    category: "C Programming",
+    question: "What are the basic data types in C?",
+    answer: "Common basic data types are int, char, float, and double."
+  },
+  {
+    category: "C Programming",
+    question: "What is a constant?",
+    answer: "A constant is a value that does not change during program execution."
+  },
+  {
+    category: "C Programming",
+    question: "What is the purpose of printf()?",
+    answer: "printf() is used to display formatted output on the screen."
+  },
+  {
+    category: "C Programming",
+    question: "What is the purpose of scanf()?",
+    answer: "scanf() is used to read formatted input from the user."
+  },
+  {
+    category: "C Programming",
+    question: "What is a function?",
+    answer: "A function is a reusable block of code that performs a specific task."
+  },
+  {
+    category: "C Programming",
+    question: "What is the main() function?",
+    answer: "main() is the entry point where execution of a C program begins."
+  },
+  {
+    category: "C Programming",
+    question: "What is an operator?",
+    answer: "An operator is a symbol that performs an operation on one or more operands."
+  },
+  {
+    category: "C Programming",
+    question: "What are arithmetic operators?",
+    answer: "Arithmetic operators include +, -, *, /, and %."
+  },
+  {
+    category: "C Programming",
+    question: "What is the difference between = and ==?",
+    answer: "= assigns a value, while == compares two values for equality."
+  },
+  {
+    category: "C Programming",
+    question: "What is an if statement?",
+    answer: "An if statement executes a block of code when a specified condition is true."
+  },
+  {
+    category: "C Programming",
+    question: "What is a loop?",
+    answer: "A loop repeatedly executes a block of code until a condition becomes false."
+  },
+  {
+    category: "C Programming",
+    question: "What are the types of loops in C?",
+    answer: "The main loops are for, while, and do-while."
+  },
+  {
+    category: "C Programming",
+    question: "What is an array?",
+    answer: "An array is a collection of elements of the same data type stored in contiguous memory locations."
+  },
+  {
+    category: "C Programming",
+    question: "What is a string in C?",
+    answer: "A string is a sequence of characters terminated by the null character \\0."
+  },
+  {
+    category: "C Programming",
+    question: "What is a pointer?",
+    answer: "A pointer is a variable that stores the memory address of another variable."
+  },
+  {
+    category: "C Programming",
+    question: "What is a null pointer?",
+    answer: "A null pointer is a pointer that does not point to a valid object or function."
+  },
+  {
+    category: "C Programming",
+    question: "What is a structure?",
+    answer: "A structure is a user-defined data type that groups variables of different data types."
+  },
+  {
+    category: "C Programming",
+    question: "What is a union?",
+    answer: "A union is a user-defined data type in which all members share the same memory location."
+  },
+  {
+    category: "C Programming",
+    question: "What is recursion?",
+    answer: "Recursion is a technique where a function calls itself until a base condition is reached."
+  },
+  {
+    category: "C Programming",
+    question: "What is dynamic memory allocation?",
+    answer: "Dynamic memory allocation allows memory to be allocated during program execution."
+  },
+  {
+    category: "C Programming",
+    question: "What is malloc()?",
+    answer: "malloc() allocates a specified number of bytes of memory but does not initialize it."
+  },
+  {
+    category: "C Programming",
+    question: "What is calloc()?",
+    answer: "calloc() allocates memory for multiple elements and initializes the allocated memory to zero."
+  },
+  {
+    category: "C Programming",
+    question: "What is realloc()?",
+    answer: "realloc() changes the size of previously allocated memory."
+  },
+  {
+    category: "C Programming",
+    question: "What is free()?",
+    answer: "free() releases dynamically allocated memory."
+  },
+  {
+    category: "C Programming",
+    question: "What is a header file?",
+    answer: "A header file contains declarations and definitions that can be included in multiple source files."
+  },
+  {
+    category: "C Programming",
+    question: "What is #include?",
+    answer: "#include is a preprocessor directive used to include a header file."
+  },
+  {
+    category: "C Programming",
+    question: "What is #define?",
+    answer: "#define is used to define macros or symbolic constants."
+  },
+  {
+    category: "C Programming",
+    question: "What is a preprocessor?",
+    answer: "The preprocessor processes directives such as #include and #define before compilation."
+  },
+  {
+    category: "C Programming",
+    question: "What is a compiler?",
+    answer: "A compiler translates C source code into machine code or an executable program."
+  },
+  {
+    category: "C Programming",
+    question: "What is type casting?",
+    answer: "Type casting is the process of converting a value from one data type to another."
+  },
+  {
+    category: "C Programming",
+    question: "What is sizeof()?",
+    answer: "sizeof() returns the size of a data type or object in bytes."
+  },
+  {
+    category: "C Programming",
+    question: "What is the difference between local and global variables?",
+    answer: "A local variable is accessible only within its block or function, while a global variable can be accessed according to its scope throughout the program."
+  },
+  {
+    category: "C Programming",
+    question: "What is a static variable?",
+    answer: "A static local variable retains its value between function calls."
+  },
+  {
+    category: "C Programming",
+    question: "What is an extern variable?",
+    answer: "An extern declaration refers to a variable or function defined in another source file or elsewhere in the program."
+  },
+  {
+    category: "C Programming",
+    question: "What is the break statement?",
+    answer: "break immediately terminates the nearest enclosing loop or switch statement."
+  },
+  {
+    category: "C Programming",
+    question: "What is the continue statement?",
+    answer: "continue skips the remaining statements in the current loop iteration."
+  },
+  {
+    category: "C Programming",
+    question: "What is a switch statement?",
+    answer: "A switch statement selects one block of code to execute from multiple alternatives based on an expression."
+  },
+  {
+    category: "C Programming",
+    question: "What is a file in C?",
+    answer: "A file is a named collection of data stored on secondary storage."
+  },
+  {
+    category: "C Programming",
+    question: "What is fopen()?",
+    answer: "fopen() opens a file and returns a pointer to a FILE object when successful."
+  },
+  {
+    category: "C Programming",
+    question: "What is the difference between text and binary files?",
+    answer: "Text files store data as readable characters, while binary files store data in binary form."
+  },
+  {
+    category: "C Programming",
+    question: "What is command-line argument?",
+    answer: "Command-line arguments are values passed to a program when it is executed."
+  },
+  {
+    category: "C Programming",
+    question: "What is a segmentation fault?",
+    answer: "A segmentation fault is a runtime error caused by accessing memory in an invalid way."
+  },
+  {
+    category: "C Programming",
+    question: "What is a dangling pointer?",
+    answer: "A dangling pointer points to memory that has been freed or is no longer valid."
+  },
+  {
+    category: "C Programming",
+    question: "What is a function prototype?",
+    answer: "A function prototype declares a function's name, return type, and parameter types before it is used."
+  },
+  {
+    category: "C Programming",
+    question: "What is pass by value?",
+    answer: "In pass by value, a copy of the argument is passed to the function."
+  },
+  {
+    category: "C Programming",
+    question: "How can C simulate pass by reference?",
+    answer: "C can modify a caller's variable by passing its address to a function and using pointer parameters."
+  },
+  {
+    category: "C Programming",
+    question: "What are the main features of C?",
+    answer: "C is efficient, portable, structured, flexible, supports pointers and low-level memory access, and is suitable for system and embedded programming."
+  },
+
+  // ==========================================
+  // 2. C++ PROGRAMMING (50 Q&A)
+  // ==========================================
+  {
+    category: "C++",
+    question: "What is C++?",
+    answer: "C++ is a general-purpose programming language that supports procedural, object-oriented, and generic programming."
+  },
+  {
+    category: "C++",
+    question: "Who developed C++?",
+    answer: "C++ was developed by Bjarne Stroustrup."
+  },
+  {
+    category: "C++",
+    question: "What is a class?",
+    answer: "A class is a user-defined type that groups data members and member functions."
+  },
+  {
+    category: "C++",
+    question: "What is an object?",
+    answer: "An object is an instance of a class."
+  },
+  {
+    category: "C++",
+    question: "What is encapsulation?",
+    answer: "Encapsulation combines data and the functions that operate on it into a single unit and can restrict direct access to internal state."
+  },
+  {
+    category: "C++",
+    question: "What is inheritance?",
+    answer: "Inheritance allows a class to acquire and extend the properties and behavior of another class."
+  },
+  {
+    category: "C++",
+    question: "What is polymorphism?",
+    answer: "Polymorphism allows the same interface or operation to behave differently for different types or objects."
+  },
+  {
+    category: "C++",
+    question: "What is abstraction?",
+    answer: "Abstraction hides unnecessary implementation details and exposes essential functionality."
+  },
+  {
+    category: "C++",
+    question: "What is a constructor?",
+    answer: "A constructor is a special member function automatically called when an object is created."
+  },
+  {
+    category: "C++",
+    question: "What is a destructor?",
+    answer: "A destructor is a special member function called when an object is destroyed."
+  },
+  {
+    category: "C++",
+    question: "What is function overloading?",
+    answer: "Function overloading allows multiple functions with the same name but different parameter lists."
+  },
+  {
+    category: "C++",
+    question: "What is operator overloading?",
+    answer: "Operator overloading allows operators to have user-defined behavior for class types."
+  },
+  {
+    category: "C++",
+    question: "What is function overriding?",
+    answer: "Function overriding occurs when a derived class provides a new implementation of an inherited virtual function with a matching signature."
+  },
+  {
+    category: "C++",
+    question: "What is a virtual function?",
+    answer: "A virtual function enables runtime polymorphism when called through a base-class pointer or reference."
+  },
+  {
+    category: "C++",
+    question: "What is a pure virtual function?",
+    answer: "A pure virtual function is declared with = 0 and makes the class abstract."
+  },
+  {
+    category: "C++",
+    question: "What is an abstract class?",
+    answer: "An abstract class is a class that cannot be instantiated directly and typically contains at least one pure virtual function."
+  },
+  {
+    category: "C++",
+    question: "What is a friend function?",
+    answer: "A friend function is a non-member function that has access to private and protected members of a class when declared as a friend."
+  },
+  {
+    category: "C++",
+    question: "What is a namespace?",
+    answer: "A namespace groups identifiers and helps avoid name conflicts."
+  },
+  {
+    category: "C++",
+    question: "What is the STL?",
+    answer: "STL stands for Standard Template Library, which provides containers, algorithms, iterators, and related utilities."
+  },
+  {
+    category: "C++",
+    question: "What is a vector?",
+    answer: "A vector is a dynamically resizable sequence container."
+  },
+  {
+    category: "C++",
+    question: "What is a template?",
+    answer: "A template allows generic functions or classes to work with different data types."
+  },
+  {
+    category: "C++",
+    question: "What is a reference?",
+    answer: "A reference is an alias for an existing object."
+  },
+  {
+    category: "C++",
+    question: "What is the this pointer?",
+    answer: "The this pointer points to the current object inside a non-static member function."
+  },
+  {
+    category: "C++",
+    question: "What is dynamic memory allocation in C++?",
+    answer: "Dynamic memory can be allocated using new and released using delete."
+  },
+  {
+    category: "C++",
+    question: "What is the difference between new/delete and malloc/free?",
+    answer: "new/delete are C++ operators that construct and destroy objects, while malloc/free allocate and release raw memory without calling constructors or destructors."
+  },
+  {
+    category: "C++",
+    question: "What is a copy constructor?",
+    answer: "A copy constructor initializes a new object from an existing object of the same class."
+  },
+  {
+    category: "C++",
+    question: "What is an assignment operator?",
+    answer: "The assignment operator assigns one object's state to another existing object."
+  },
+  {
+    category: "C++",
+    question: "What is multiple inheritance?",
+    answer: "Multiple inheritance allows a class to inherit from more than one base class."
+  },
+  {
+    category: "C++",
+    question: "What is single inheritance?",
+    answer: "Single inheritance occurs when one derived class inherits from one base class."
+  },
+  {
+    category: "C++",
+    question: "What is multilevel inheritance?",
+    answer: "Multilevel inheritance forms a chain where a class derives from another derived class."
+  },
+  {
+    category: "C++",
+    question: "What is hierarchical inheritance?",
+    answer: "Hierarchical inheritance occurs when multiple derived classes inherit from one base class."
+  },
+  {
+    category: "C++",
+    question: "What are access specifiers?",
+    answer: "C++ uses public, private, and protected to control access to class members."
+  },
+  {
+    category: "C++",
+    question: "What is exception handling?",
+    answer: "Exception handling manages runtime errors using try, throw, and catch."
+  },
+  {
+    category: "C++",
+    question: "What is const in C++?",
+    answer: "const is used to indicate that an object or member function should not modify the relevant state through that declaration."
+  },
+  {
+    category: "C++",
+    question: "What is a static member?",
+    answer: "A static member belongs to the class itself rather than to each individual object."
+  },
+  {
+    category: "C++",
+    question: "What is an inline function?",
+    answer: "An inline function is a function that the compiler may expand at the call site as an optimization."
+  },
+  {
+    category: "C++",
+    question: "What is a lambda expression?",
+    answer: "A lambda expression creates an anonymous function object."
+  },
+  {
+    category: "C++",
+    question: "What is a smart pointer?",
+    answer: "A smart pointer is an object that manages dynamically allocated resources automatically, such as unique_ptr or shared_ptr."
+  },
+  {
+    category: "C++",
+    question: "What is RAII?",
+    answer: "RAII is a C++ technique where resource ownership is tied to object lifetime."
+  },
+  {
+    category: "C++",
+    question: "What is std::unique_ptr?",
+    answer: "std::unique_ptr provides exclusive ownership of a dynamically allocated object."
+  },
+  {
+    category: "C++",
+    question: "What is std::shared_ptr?",
+    answer: "std::shared_ptr allows multiple smart pointers to share ownership of an object."
+  },
+  {
+    category: "C++",
+    question: "What is a map?",
+    answer: "A map stores key-value pairs with unique keys and ordered key access in std::map."
+  },
+  {
+    category: "C++",
+    question: "What is an iterator?",
+    answer: "An iterator is an object used to traverse elements in a container."
+  },
+  {
+    category: "C++",
+    question: "What is the difference between struct and class?",
+    answer: "In C++, struct members are public by default, while class members are private by default."
+  },
+  {
+    category: "C++",
+    question: "What is compile-time polymorphism?",
+    answer: "Compile-time polymorphism includes mechanisms such as function overloading, operator overloading, and templates."
+  },
+  {
+    category: "C++",
+    question: "What is runtime polymorphism?",
+    answer: "Runtime polymorphism is typically achieved through virtual functions and dynamic dispatch."
+  },
+  {
+    category: "C++",
+    question: "What is a header file?",
+    answer: "A header file contains declarations and definitions intended for inclusion in source files."
+  },
+  {
+    category: "C++",
+    question: "What is #include?",
+    answer: "#include is a preprocessor directive used to include the contents of another file."
+  },
+  {
+    category: "C++",
+    question: "What is using namespace std;?",
+    answer: "It allows names from the std namespace to be used without writing the std:: prefix."
+  },
+  {
+    category: "C++",
+    question: "What are the major features of C++?",
+    answer: "C++ supports object-oriented programming, generic programming, templates, STL, low-level control, RAII, and efficient system development."
+  },
+
+  // ==========================================
+  // 3. PYTHON PROGRAMMING (50 Q&A)
+  // ==========================================
+  {
+    category: "Python",
+    question: "What is Python?",
+    answer: "Python is a high-level, interpreted, general-purpose programming language."
+  },
+  {
+    category: "Python",
+    question: "Who created Python?",
+    answer: "Python was created by Guido van Rossum."
+  },
+  {
+    category: "Python",
+    question: "What are the main features of Python?",
+    answer: "Python is known for readable syntax, dynamic typing, a large standard library, and support for multiple programming paradigms."
+  },
+  {
+    category: "Python",
+    question: "What is a variable in Python?",
+    answer: "A variable is a name bound to an object."
+  },
+  {
+    category: "Python",
+    question: "What are the common Python data types?",
+    answer: "Common types include int, float, str, bool, list, tuple, set, and dict."
+  },
+  {
+    category: "Python",
+    question: "What is a list?",
+    answer: "A list is an ordered, mutable collection."
+  },
+  {
+    category: "Python",
+    question: "What is a tuple?",
+    answer: "A tuple is an ordered collection that is generally immutable."
+  },
+  {
+    category: "Python",
+    question: "What is a set?",
+    answer: "A set is an unordered collection of unique elements."
+  },
+  {
+    category: "Python",
+    question: "What is a dictionary?",
+    answer: "A dictionary stores key-value pairs."
+  },
+  {
+    category: "Python",
+    question: "What is a string?",
+    answer: "A string is an immutable sequence of Unicode characters."
+  },
+  {
+    category: "Python",
+    question: "What is indentation in Python?",
+    answer: "Indentation defines code blocks such as function bodies, loops, and conditional statements."
+  },
+  {
+    category: "Python",
+    question: "What is a function?",
+    answer: "A function is a reusable block of code that performs a specific task."
+  },
+  {
+    category: "Python",
+    question: "How is a function defined?",
+    answer: "A function is defined using the def keyword."
+  },
+  {
+    category: "Python",
+    question: "What is a lambda function?",
+    answer: "A lambda function is a small anonymous function written using the lambda keyword."
+  },
+  {
+    category: "Python",
+    question: "What is a module?",
+    answer: "A module is a Python file containing code such as functions, classes, and variables that can be imported."
+  },
+  {
+    category: "Python",
+    question: "What is a package?",
+    answer: "A package is a way to organize related Python modules into a namespace."
+  },
+  {
+    category: "Python",
+    question: "What is a class?",
+    answer: "A class is a blueprint for creating objects."
+  },
+  {
+    category: "Python",
+    question: "What is an object?",
+    answer: "An object is an instance of a class."
+  },
+  {
+    category: "Python",
+    question: "What is __init__()?",
+    answer: "__init__() is an initializer method automatically called after an object is created."
+  },
+  {
+    category: "Python",
+    question: "What is inheritance?",
+    answer: "Inheritance allows a class to reuse and extend behavior from another class."
+  },
+  {
+    category: "Python",
+    question: "What is polymorphism?",
+    answer: "Polymorphism allows the same interface or operation to work with different object types."
+  },
+  {
+    category: "Python",
+    question: "What is encapsulation?",
+    answer: "Encapsulation groups data and behavior and uses conventions or mechanisms to control access."
+  },
+  {
+    category: "Python",
+    question: "What is a decorator?",
+    answer: "A decorator is a callable that modifies or extends the behavior of another callable or class."
+  },
+  {
+    category: "Python",
+    question: "What is a generator?",
+    answer: "A generator produces values lazily, often using the yield statement."
+  },
+  {
+    category: "Python",
+    question: "What is an iterator?",
+    answer: "An iterator is an object that produces items one at a time using the iterator protocol."
+  },
+  {
+    category: "Python",
+    question: "What is list comprehension?",
+    answer: "List comprehension is a compact syntax for creating lists from iterables."
+  },
+  {
+    category: "Python",
+    question: "What is exception handling?",
+    answer: "Exception handling manages errors using try, except, else, and finally."
+  },
+  {
+    category: "Python",
+    question: "What is the purpose of finally?",
+    answer: "The finally block executes whether or not an exception occurs."
+  },
+  {
+    category: "Python",
+    question: "What is None?",
+    answer: "None is a singleton value commonly used to represent the absence of a value."
+  },
+  {
+    category: "Python",
+    question: "What is the difference between == and is?",
+    answer: "== compares values, while is checks whether two references point to the same object."
+  },
+  {
+    category: "Python",
+    question: "What is slicing?",
+    answer: "Slicing extracts a portion of a sequence using start, stop, and optional step values."
+  },
+  {
+    category: "Python",
+    question: "What is a mutable object?",
+    answer: "A mutable object can be modified after creation."
+  },
+  {
+    category: "Python",
+    question: "What is an immutable object?",
+    answer: "An immutable object cannot be changed after it is created."
+  },
+  {
+    category: "Python",
+    question: "What is *args?",
+    answer: "*args collects extra positional arguments into a tuple."
+  },
+  {
+    category: "Python",
+    question: "What is **kwargs?",
+    answer: "**kwargs collects extra keyword arguments into a dictionary."
+  },
+  {
+    category: "Python",
+    question: "What is recursion?",
+    answer: "Recursion occurs when a function calls itself."
+  },
+  {
+    category: "Python",
+    question: "What is file handling?",
+    answer: "File handling involves opening, reading, writing, and closing files."
+  },
+  {
+    category: "Python",
+    question: "What is the with statement used for?",
+    answer: "The with statement manages resources using a context manager, ensuring cleanup such as closing files."
+  },
+  {
+    category: "Python",
+    question: "What is a virtual environment?",
+    answer: "A virtual environment isolates a project's Python packages and dependencies."
+  },
+  {
+    category: "Python",
+    question: "What is PIP?",
+    answer: "pip is the standard package installer commonly used to install and manage Python packages."
+  },
+  {
+    category: "Python",
+    question: "What is NumPy?",
+    answer: "NumPy is a Python library for efficient numerical arrays and scientific computing."
+  },
+  {
+    category: "Python",
+    question: "What is Pandas?",
+    answer: "Pandas is a library for data manipulation and analysis using structures such as Series and DataFrames."
+  },
+  {
+    category: "Python",
+    question: "What is a DataFrame?",
+    answer: "A DataFrame is a two-dimensional labeled tabular data structure provided by Pandas."
+  },
+  {
+    category: "Python",
+    question: "What is deep copy?",
+    answer: "A deep copy recursively copies an object and its nested mutable objects."
+  },
+  {
+    category: "Python",
+    question: "What is shallow copy?",
+    answer: "A shallow copy creates a new outer object but may share references to nested objects."
+  },
+  {
+    category: "Python",
+    question: "What is the Global Interpreter Lock?",
+    answer: "In standard CPython, the GIL allows only one thread to execute Python bytecode at a time within a process."
+  },
+  {
+    category: "Python",
+    question: "What is multithreading?",
+    answer: "Multithreading allows multiple threads of execution within a process."
+  },
+  {
+    category: "Python",
+    question: "What is multiprocessing?",
+    answer: "Multiprocessing uses separate processes, which can run independently and potentially on multiple CPU cores."
+  },
+  {
+    category: "Python",
+    question: "What is an API?",
+    answer: "An API is an interface that allows different software systems to communicate."
+  },
+  {
+    category: "Python",
+    question: "What are the major applications of Python?",
+    answer: "Python is used in web development, automation, data science, artificial intelligence, scientific computing, scripting, and many other areas."
+  },
+
+  // ==========================================
+  // 4. JAVA PROGRAMMING (50 Q&A)
+  // ==========================================
+  {
+    category: "Java",
+    question: "What is Java?",
+    answer: "Java is a high-level, object-oriented programming language designed for portability across platforms."
+  },
+  {
+    category: "Java",
+    question: "Who developed Java?",
+    answer: "Java was originally developed by James Gosling and his team at Sun Microsystems."
+  },
+  {
+    category: "Java",
+    question: "What is JVM?",
+    answer: "The Java Virtual Machine executes Java bytecode."
+  },
+  {
+    category: "Java",
+    question: "What is JRE?",
+    answer: "The Java Runtime Environment provides the libraries and JVM needed to run Java applications."
+  },
+  {
+    category: "Java",
+    question: "What is JDK?",
+    answer: "The Java Development Kit includes development tools such as the compiler along with the runtime environment."
+  },
+  {
+    category: "Java",
+    question: "What is a class?",
+    answer: "A class is a blueprint used to create objects."
+  },
+  {
+    category: "Java",
+    question: "What is an object?",
+    answer: "An object is an instance of a class."
+  },
+  {
+    category: "Java",
+    question: "What is a constructor?",
+    answer: "A constructor initializes an object when it is created."
+  },
+  {
+    category: "Java",
+    question: "What is method overloading?",
+    answer: "Method overloading uses the same method name with different parameter lists."
+  },
+  {
+    category: "Java",
+    question: "What is method overriding?",
+    answer: "Method overriding occurs when a subclass provides a new implementation of an inherited method with a compatible signature."
+  },
+  {
+    category: "Java",
+    question: "What is inheritance?",
+    answer: "Inheritance allows one class to acquire and extend the fields and methods of another class."
+  },
+  {
+    category: "Java",
+    question: "What is polymorphism?",
+    answer: "Polymorphism allows one interface or reference type to represent objects with different implementations."
+  },
+  {
+    category: "Java",
+    question: "What is encapsulation?",
+    answer: "Encapsulation bundles data and methods and controls access to internal state."
+  },
+  {
+    category: "Java",
+    question: "What is abstraction?",
+    answer: "Abstraction hides implementation details and exposes essential behavior."
+  },
+  {
+    category: "Java",
+    question: "What is an interface?",
+    answer: "An interface defines a contract that implementing classes must follow and can also contain default and static methods."
+  },
+  {
+    category: "Java",
+    question: "What is an abstract class?",
+    answer: "An abstract class cannot be instantiated directly and may contain abstract and concrete methods."
+  },
+  {
+    category: "Java",
+    question: "What are access modifiers?",
+    answer: "Common access modifiers are public, protected, private, and package-private access when no modifier is specified."
+  },
+  {
+    category: "Java",
+    question: "What is the static keyword?",
+    answer: "static indicates that a member belongs to the class rather than to individual instances."
+  },
+  {
+    category: "Java",
+    question: "What is the final keyword?",
+    answer: "final can prevent reassignment of a variable, overriding of a method, or extension of a class."
+  },
+  {
+    category: "Java",
+    question: "What is the this keyword?",
+    answer: "this refers to the current object."
+  },
+  {
+    category: "Java",
+    question: "What is the super keyword?",
+    answer: "super refers to members of the immediate superclass."
+  },
+  {
+    category: "Java",
+    question: "What is exception handling?",
+    answer: "Exception handling manages abnormal conditions using constructs such as try, catch, finally, throw, and throws."
+  },
+  {
+    category: "Java",
+    question: "What is a checked exception?",
+    answer: "A checked exception must generally be caught or declared in the method signature."
+  },
+  {
+    category: "Java",
+    question: "What is an unchecked exception?",
+    answer: "An unchecked exception is typically a subclass of RuntimeException and is not required to be declared or caught."
+  },
+  {
+    category: "Java",
+    question: "What is multithreading?",
+    answer: "Multithreading allows multiple threads of execution within a Java process."
+  },
+  {
+    category: "Java",
+    question: "What is the difference between a process and a thread?",
+    answer: "A process has its own memory space and resources, while threads are execution units that share resources within a process."
+  },
+  {
+    category: "Java",
+    question: "What is synchronization?",
+    answer: "Synchronization coordinates access to shared resources to prevent race conditions."
+  },
+  {
+    category: "Java",
+    question: "What is garbage collection?",
+    answer: "Garbage collection automatically reclaims memory from objects that are no longer reachable."
+  },
+  {
+    category: "Java",
+    question: "What is a package?",
+    answer: "A package groups related classes and interfaces."
+  },
+  {
+    category: "Java",
+    question: "What is an array?",
+    answer: "An array is a fixed-size collection of elements of the same type."
+  },
+  {
+    category: "Java",
+    question: "What is ArrayList?",
+    answer: "ArrayList is a resizable array implementation in the Java Collections Framework."
+  },
+  {
+    category: "Java",
+    question: "What is LinkedList?",
+    answer: "LinkedList is a linked-node implementation that can also act as a list or deque."
+  },
+  {
+    category: "Java",
+    question: "What is HashSet?",
+    answer: "HashSet is a set implementation that stores unique elements without guaranteed iteration order."
+  },
+  {
+    category: "Java",
+    question: "What is HashMap?",
+    answer: "HashMap stores key-value pairs and provides efficient average-case lookup by key."
+  },
+  {
+    category: "Java",
+    question: "What is the Collections Framework?",
+    answer: "The Collections Framework provides interfaces and classes for storing and manipulating groups of objects."
+  },
+  {
+    category: "Java",
+    question: "What is an iterator?",
+    answer: "An iterator is used to traverse elements in a collection."
+  },
+  {
+    category: "Java",
+    question: "What is JDBC?",
+    answer: "JDBC is the Java API used to connect to and interact with relational databases."
+  },
+  {
+    category: "Java",
+    question: "What is serialization?",
+    answer: "Serialization converts an object's state into a byte stream for storage or transmission."
+  },
+  {
+    category: "Java",
+    question: "What is deserialization?",
+    answer: "Deserialization reconstructs an object from serialized data."
+  },
+  {
+    category: "Java",
+    question: "What is an enum?",
+    answer: "An enum defines a fixed set of named constants."
+  },
+  {
+    category: "Java",
+    question: "What is a lambda expression?",
+    answer: "A lambda expression provides a concise way to implement a functional interface."
+  },
+  {
+    category: "Java",
+    question: "What is a functional interface?",
+    answer: "A functional interface has exactly one abstract method."
+  },
+  {
+    category: "Java",
+    question: "What is the Stream API?",
+    answer: "The Stream API supports declarative processing of sequences of elements."
+  },
+  {
+    category: "Java",
+    question: "What is the difference between String, StringBuilder, and StringBuffer?",
+    answer: "String is immutable, StringBuilder is mutable and generally not synchronized, and StringBuffer is mutable and synchronized."
+  },
+  {
+    category: "Java",
+    question: "What is the equals() method?",
+    answer: "equals() is used to test logical equality and can be overridden by classes."
+  },
+  {
+    category: "Java",
+    question: "What is hashCode()?",
+    answer: "hashCode() returns an integer hash value used by hash-based collections."
+  },
+  {
+    category: "Java",
+    question: "What is the difference between == and equals()?",
+    answer: "For object references, == checks reference identity, while equals() checks logical equality according to the class implementation."
+  },
+  {
+    category: "Java",
+    question: "What is Java bytecode?",
+    answer: "Bytecode is the intermediate code generated by the Java compiler and executed by the JVM."
+  },
+  {
+    category: "Java",
+    question: "What is platform independence?",
+    answer: "Java source is compiled to bytecode that can run on compatible JVM implementations across different platforms."
+  },
+  {
+    category: "Java",
+    question: "What are the major features of Java?",
+    answer: "Java supports object-oriented programming, automatic memory management, strong typing, multithreading, a large standard library, and platform portability."
+  },
+
+  // ==========================================
+  // 5. DATA STRUCTURES (50 Q&A)
+  // ==========================================
+  {
+    category: "Data Structures",
+    question: "What is a data structure?",
+    answer: "A data structure is a method of organizing and storing data for efficient access and modification."
+  },
+  {
+    category: "Data Structures",
+    question: "What are linear data structures?",
+    answer: "Linear data structures organize elements sequentially, such as arrays, linked lists, stacks, and queues."
+  },
+  {
+    category: "Data Structures",
+    question: "What are non-linear data structures?",
+    answer: "Non-linear data structures organize data hierarchically or as networks, such as trees and graphs."
+  },
+  {
+    category: "Data Structures",
+    question: "What is an array?",
+    answer: "An array stores elements of the same type in indexed positions, typically in contiguous memory."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a linked list?",
+    answer: "A linked list stores elements as nodes connected through links or references."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a singly linked list?",
+    answer: "A singly linked list has nodes that point to the next node."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a doubly linked list?",
+    answer: "A doubly linked list has nodes with links to both the previous and next nodes."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a circular linked list?",
+    answer: "In a circular linked list, the last node links back to an earlier node, often the first node."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a stack?",
+    answer: "A stack is a linear data structure that follows the LIFO principle."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a queue?",
+    answer: "A queue is a linear data structure that follows the FIFO principle."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a priority queue?",
+    answer: "A priority queue removes elements according to priority rather than strictly by insertion order."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a circular queue?",
+    answer: "A circular queue connects the end of the queue back to the beginning to reuse available space."
+  },
+  {
+    category: "Data Structures",
+    question: "What are stack operations?",
+    answer: "Common stack operations are push, pop, peek, and checking whether the stack is empty."
+  },
+  {
+    category: "Data Structures",
+    question: "What are queue operations?",
+    answer: "Common queue operations are enqueue, dequeue, peek, and checking whether the queue is empty."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a tree?",
+    answer: "A tree is a hierarchical data structure consisting of nodes connected by edges."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a binary tree?",
+    answer: "A binary tree is a tree in which each node has at most two children."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a binary search tree?",
+    answer: "A binary search tree maintains an ordering property where values in the left subtree are less than the node and values in the right subtree are greater, according to a chosen duplicate policy."
+  },
+  {
+    category: "Data Structures",
+    question: "What is tree traversal?",
+    answer: "Tree traversal is the process of visiting every node in a tree."
+  },
+  {
+    category: "Data Structures",
+    question: "What is inorder traversal?",
+    answer: "Inorder traversal visits the left subtree, then the node, then the right subtree."
+  },
+  {
+    category: "Data Structures",
+    question: "What is preorder traversal?",
+    answer: "Preorder traversal visits the node, then the left subtree, then the right subtree."
+  },
+  {
+    category: "Data Structures",
+    question: "What is postorder traversal?",
+    answer: "Postorder traversal visits the left subtree, then the right subtree, and finally the node."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a graph?",
+    answer: "A graph consists of vertices connected by edges."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a directed graph?",
+    answer: "A directed graph has edges with direction."
+  },
+  {
+    category: "Data Structures",
+    question: "What is an undirected graph?",
+    answer: "An undirected graph has edges without direction."
+  },
+  {
+    category: "Data Structures",
+    question: "What is BFS?",
+    answer: "Breadth-First Search explores graph vertices level by level and typically uses a queue."
+  },
+  {
+    category: "Data Structures",
+    question: "What is DFS?",
+    answer: "Depth-First Search explores as far as possible along a path before backtracking and can use recursion or a stack."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a hash table?",
+    answer: "A hash table stores data using a hash function that maps keys to table locations."
+  },
+  {
+    category: "Data Structures",
+    question: "What is hashing?",
+    answer: "Hashing converts a key into an index or hash value used to locate data efficiently."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a collision in hashing?",
+    answer: "A collision occurs when two keys map to the same table location."
+  },
+  {
+    category: "Data Structures",
+    question: "How can collisions be resolved?",
+    answer: "Common methods include chaining and open addressing."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a heap?",
+    answer: "A heap is a tree-based structure that satisfies a heap-order property."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a max heap?",
+    answer: "In a max heap, every parent has a value greater than or equal to its children."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a min heap?",
+    answer: "In a min heap, every parent has a value less than or equal to its children."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a trie?",
+    answer: "A trie is a tree structure commonly used to store and search strings by prefixes."
+  },
+  {
+    category: "Data Structures",
+    question: "What is an AVL tree?",
+    answer: "An AVL tree is a self-balancing binary search tree that maintains a bounded height difference between subtrees."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a B-tree?",
+    answer: "A B-tree is a balanced multiway search tree designed for efficient storage and retrieval, especially on disk-based systems."
+  },
+  {
+    category: "Data Structures",
+    question: "What is time complexity?",
+    answer: "Time complexity describes how an algorithm's running time grows with input size."
+  },
+  {
+    category: "Data Structures",
+    question: "What is space complexity?",
+    answer: "Space complexity describes how an algorithm's memory usage grows with input size."
+  },
+  {
+    category: "Data Structures",
+    question: "What is Big O notation?",
+    answer: "Big O notation describes an asymptotic upper bound on algorithm growth."
+  },
+  {
+    category: "Data Structures",
+    question: "What is the time complexity of binary search?",
+    answer: "Binary search runs in O(log n) time on a sorted, indexable collection."
+  },
+  {
+    category: "Data Structures",
+    question: "What is the time complexity of linear search?",
+    answer: "Linear search has a worst-case time complexity of O(n)."
+  },
+  {
+    category: "Data Structures",
+    question: "What is recursion?",
+    answer: "Recursion is a method where a function solves a problem by calling itself on smaller instances."
+  },
+  {
+    category: "Data Structures",
+    question: "What is divide and conquer?",
+    answer: "Divide and conquer solves a problem by dividing it into smaller subproblems, solving them, and combining the results."
+  },
+  {
+    category: "Data Structures",
+    question: "What is dynamic programming?",
+    answer: "Dynamic programming solves problems by storing and reusing results of overlapping subproblems."
+  },
+  {
+    category: "Data Structures",
+    question: "What is greedy algorithm?",
+    answer: "A greedy algorithm makes a locally optimal choice at each step in the hope of reaching a global optimum."
+  },
+  {
+    category: "Data Structures",
+    question: "What is sorting?",
+    answer: "Sorting arranges data according to a specified order."
+  },
+  {
+    category: "Data Structures",
+    question: "What is the difference between stable and unstable sorting?",
+    answer: "A stable sort preserves the relative order of equal elements; an unstable sort may change it."
+  },
+  {
+    category: "Data Structures",
+    question: "What is a balanced tree?",
+    answer: "A balanced tree maintains a height that is controlled enough to keep operations efficient."
+  },
+  {
+    category: "Data Structures",
+    question: "What is topological sorting?",
+    answer: "Topological sorting orders the vertices of a directed acyclic graph so every directed edge goes from an earlier vertex to a later one."
+  },
+  {
+    category: "Data Structures",
+    question: "Why are data structures important?",
+    answer: "Data structures are important because the choice of structure affects the efficiency, scalability, and clarity of algorithms and programs."
+  },
+
+  // ==========================================
+  // 6. PHYSICS (50 Q&A)
+  // ==========================================
+  {
+    category: "Physics",
+    question: "What is physics?",
+    answer: "Physics is the study of matter, energy, motion, forces, and the laws governing natural phenomena."
+  },
+  {
+    category: "Physics",
+    question: "What is a physical quantity?",
+    answer: "A physical quantity is a measurable property expressed by a numerical value and a unit."
+  },
+  {
+    category: "Physics",
+    question: "What are SI units?",
+    answer: "SI units are the internationally standardized units used for physical measurements."
+  },
+  {
+    category: "Physics",
+    question: "What is displacement?",
+    answer: "Displacement is the change in position from an initial point to a final point and has both magnitude and direction."
+  },
+  {
+    category: "Physics",
+    question: "What is velocity?",
+    answer: "Velocity is the rate of change of displacement with time."
+  },
+  {
+    category: "Physics",
+    question: "What is acceleration?",
+    answer: "Acceleration is the rate of change of velocity with time."
+  },
+  {
+    category: "Physics",
+    question: "What is force?",
+    answer: "Force is an interaction that can change an object's motion."
+  },
+  {
+    category: "Physics",
+    question: "What is Newton's First Law?",
+    answer: "An object remains at rest or in uniform straight-line motion unless acted upon by a net external force."
+  },
+  {
+    category: "Physics",
+    question: "What is Newton's Second Law?",
+    answer: "The net force equals the rate of change of momentum; for constant mass, F = ma."
+  },
+  {
+    category: "Physics",
+    question: "What is Newton's Third Law?",
+    answer: "For every action force, there is an equal and opposite reaction force acting on another body."
+  },
+  {
+    category: "Physics",
+    question: "What is momentum?",
+    answer: "Momentum is the product of mass and velocity: p = mv."
+  },
+  {
+    category: "Physics",
+    question: "What is impulse?",
+    answer: "Impulse is the change in momentum and equals force multiplied by the time interval when the force is constant."
+  },
+  {
+    category: "Physics",
+    question: "What is work?",
+    answer: "Work is energy transferred by a force acting through a displacement: W = Fs cosθ for a constant force."
+  },
+  {
+    category: "Physics",
+    question: "What is energy?",
+    answer: "Energy is the capacity of a system to do work or cause change."
+  },
+  {
+    category: "Physics",
+    question: "What is kinetic energy?",
+    answer: "Kinetic energy is energy due to motion: KE = ½mv²."
+  },
+  {
+    category: "Physics",
+    question: "What is potential energy?",
+    answer: "Potential energy is stored energy associated with position or configuration."
+  },
+  {
+    category: "Physics",
+    question: "What is power?",
+    answer: "Power is the rate at which work is done or energy is transferred."
+  },
+  {
+    category: "Physics",
+    question: "What is the SI unit of power?",
+    answer: "The SI unit of power is the watt."
+  },
+  {
+    category: "Physics",
+    question: "What is gravitation?",
+    answer: "Gravitation is the attractive interaction between masses."
+  },
+  {
+    category: "Physics",
+    question: "What is acceleration due to gravity?",
+    answer: "Near Earth's surface, gravitational acceleration is approximately 9.8 m/s², though it varies slightly by location."
+  },
+  {
+    category: "Physics",
+    question: "What is friction?",
+    answer: "Friction is a force that opposes relative motion or the tendency of relative motion between surfaces in contact."
+  },
+  {
+    category: "Physics",
+    question: "What is pressure?",
+    answer: "Pressure is force acting per unit area."
+  },
+  {
+    category: "Physics",
+    question: "What is density?",
+    answer: "Density is mass per unit volume."
+  },
+  {
+    category: "Physics",
+    question: "What is buoyancy?",
+    answer: "Buoyancy is the upward force exerted by a fluid on an immersed or floating object."
+  },
+  {
+    category: "Physics",
+    question: "What is heat?",
+    answer: "Heat is energy transferred between systems because of a temperature difference."
+  },
+  {
+    category: "Physics",
+    question: "What is temperature?",
+    answer: "Temperature is a measure related to the average kinetic energy of particles and determines the direction of net heat transfer."
+  },
+  {
+    category: "Physics",
+    question: "What is specific heat capacity?",
+    answer: "Specific heat capacity is the heat required to raise the temperature of unit mass of a substance by one degree."
+  },
+  {
+    category: "Physics",
+    question: "What is thermal expansion?",
+    answer: "Thermal expansion is the tendency of matter to increase in size when its temperature increases."
+  },
+  {
+    category: "Physics",
+    question: "What is a wave?",
+    answer: "A wave is a disturbance that transfers energy and momentum through space or a medium."
+  },
+  {
+    category: "Physics",
+    question: "What is frequency?",
+    answer: "Frequency is the number of complete cycles or oscillations per second."
+  },
+  {
+    category: "Physics",
+    question: "What is wavelength?",
+    answer: "Wavelength is the spatial distance between successive points in the same phase of a wave."
+  },
+  {
+    category: "Physics",
+    question: "What is the wave equation?",
+    answer: "Wave speed is given by v = fλ, where f is frequency and λ is wavelength."
+  },
+  {
+    category: "Physics",
+    question: "What is sound?",
+    answer: "Sound is a mechanical wave produced by vibrations and requires a material medium to propagate."
+  },
+  {
+    category: "Physics",
+    question: "What is light?",
+    answer: "Light is electromagnetic radiation visible to the human eye."
+  },
+  {
+    category: "Physics",
+    question: "What is reflection?",
+    answer: "Reflection is the change in direction of a wave when it returns from a boundary."
+  },
+  {
+    category: "Physics",
+    question: "What is refraction?",
+    answer: "Refraction is the change in direction of a wave due to a change in its speed when entering another medium."
+  },
+  {
+    category: "Physics",
+    question: "What is electricity?",
+    answer: "Electricity involves phenomena associated with electric charge and its motion or fields."
+  },
+  {
+    category: "Physics",
+    question: "What is electric current?",
+    answer: "Electric current is the rate of flow of electric charge."
+  },
+  {
+    category: "Physics",
+    question: "What is voltage?",
+    answer: "Voltage is electric potential difference, representing energy transferred per unit charge."
+  },
+  {
+    category: "Physics",
+    question: "State Ohm's Law.",
+    answer: "For an ohmic conductor under constant physical conditions, V = IR."
+  },
+  {
+    category: "Physics",
+    question: "What is resistance?",
+    answer: "Resistance is the opposition a material or component provides to electric current."
+  },
+  {
+    category: "Physics",
+    question: "What is a magnetic field?",
+    answer: "A magnetic field is a region where magnetic forces act on moving charges, currents, or magnetic materials."
+  },
+  {
+    category: "Physics",
+    question: "What is electromagnetic induction?",
+    answer: "Electromagnetic induction is the production of an electromotive force due to a changing magnetic flux."
+  },
+  {
+    category: "Physics",
+    question: "What is a photon?",
+    answer: "A photon is a quantum of electromagnetic radiation."
+  },
+  {
+    category: "Physics",
+    question: "What is an atom?",
+    answer: "An atom is a basic unit of ordinary matter consisting of a nucleus and surrounding electrons."
+  },
+  {
+    category: "Physics",
+    question: "What is radioactivity?",
+    answer: "Radioactivity is the spontaneous emission of particles or radiation from unstable atomic nuclei."
+  },
+  {
+    category: "Physics",
+    question: "What is half-life?",
+    answer: "Half-life is the time required for half the radioactive nuclei in a sample to decay."
+  },
+  {
+    category: "Physics",
+    question: "What is nuclear fission?",
+    answer: "Nuclear fission is the splitting of a heavy atomic nucleus into smaller nuclei with energy release."
+  },
+  {
+    category: "Physics",
+    question: "What is nuclear fusion?",
+    answer: "Nuclear fusion is the combination of light atomic nuclei into a heavier nucleus with energy release."
+  },
+  {
+    category: "Physics",
+    question: "What is the law of conservation of energy?",
+    answer: "Energy cannot be created or destroyed in an isolated system; it can only be transferred or transformed."
+  },
+
+  // ==========================================
+  // 7. SEMICONDUCTOR PHYSICS (50 Q&A)
+  // ==========================================
+  {
+    category: "Semiconductor",
+    question: "What is a semiconductor?",
+    answer: "A semiconductor is a material whose electrical conductivity lies between that of a conductor and an insulator and can be controlled."
+  },
+  {
+    category: "Semiconductor",
+    question: "Give examples of semiconductors.",
+    answer: "Silicon and germanium are common elemental semiconductors."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an intrinsic semiconductor?",
+    answer: "An intrinsic semiconductor is a sufficiently pure semiconductor without intentional doping."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an extrinsic semiconductor?",
+    answer: "An extrinsic semiconductor has its electrical properties modified by intentional doping."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is doping?",
+    answer: "Doping is the controlled addition of impurities to a semiconductor to change its electrical properties."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an N-type semiconductor?",
+    answer: "An N-type semiconductor is doped with donor impurities so electrons become the majority carriers."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a P-type semiconductor?",
+    answer: "A P-type semiconductor is doped with acceptor impurities so holes become the majority carriers."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are majority carriers?",
+    answer: "Majority carriers are the charge carriers present in the greatest concentration in a doped semiconductor."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are minority carriers?",
+    answer: "Minority carriers are the less abundant charge carriers in a doped semiconductor."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a hole?",
+    answer: "A hole is the absence of an electron in a valence bond that behaves as an effective positive charge carrier."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a PN junction?",
+    answer: "A PN junction is the boundary formed when P-type and N-type semiconductor regions are joined."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is the depletion region?",
+    answer: "The depletion region is the area around a PN junction where mobile charge carriers are largely depleted, leaving fixed ionized dopants."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is forward bias?",
+    answer: "Forward bias reduces the PN junction barrier and allows significant current to flow."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is reverse bias?",
+    answer: "Reverse bias increases the junction barrier and normally allows only a small leakage current until breakdown."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a diode?",
+    answer: "A diode is a semiconductor device designed primarily to allow current more easily in one direction than the other."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is rectification?",
+    answer: "Rectification is the conversion of alternating current into direct current."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a Zener diode?",
+    answer: "A Zener diode is designed to operate reliably in reverse breakdown for applications such as voltage regulation."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an LED?",
+    answer: "An LED is a light-emitting diode that produces light when charge carriers recombine under suitable bias."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a photodiode?",
+    answer: "A photodiode is a semiconductor device that converts light into an electrical response."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a transistor?",
+    answer: "A transistor is a semiconductor device used for switching, amplification, and signal control."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are the main types of BJT?",
+    answer: "The two main BJT types are NPN and PNP."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are the terminals of a BJT?",
+    answer: "The terminals are emitter, base, and collector."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a common-emitter configuration?",
+    answer: "In a common-emitter circuit, the emitter is the common terminal for input and output and the configuration can provide significant voltage gain."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a common-base configuration?",
+    answer: "In a common-base circuit, the base is common to input and output."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a common-collector configuration?",
+    answer: "In a common-collector circuit, the collector is common to input and output and it is also called an emitter follower."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a FET?",
+    answer: "A field-effect transistor controls current using an electric field and typically uses voltage at a gate terminal."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a MOSFET?",
+    answer: "A MOSFET is a metal-oxide-semiconductor field-effect transistor widely used for switching and amplification."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is the difference between BJT and FET?",
+    answer: "A BJT is primarily controlled by base current, while a FET is primarily controlled by gate voltage and has high input impedance."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a band gap?",
+    answer: "The band gap is the energy range between the valence band and conduction band where no allowed electron states exist in an ideal crystal."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is the valence band?",
+    answer: "The valence band is the highest energy band normally occupied by electrons at low temperature."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is the conduction band?",
+    answer: "The conduction band contains energy states in which electrons can move through the material and contribute to electrical conduction."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a conductor?",
+    answer: "A conductor has many mobile charge carriers and generally offers low resistance to electric current."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an insulator?",
+    answer: "An insulator strongly resists electric current because it has very few mobile charge carriers."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is carrier mobility?",
+    answer: "Carrier mobility measures how quickly charge carriers drift through a material in response to an electric field."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is drift current?",
+    answer: "Drift current is caused by charge carriers moving under an applied electric field."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is diffusion current?",
+    answer: "Diffusion current results from charge carriers moving from regions of higher concentration to lower concentration."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is breakdown voltage?",
+    answer: "Breakdown voltage is the reverse voltage at which a junction undergoes breakdown and current increases sharply."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is avalanche breakdown?",
+    answer: "Avalanche breakdown occurs when carriers gain enough energy to create additional electron-hole pairs through impact ionization."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is Zener breakdown?",
+    answer: "Zener breakdown is a quantum tunneling process that occurs in heavily doped PN junctions under strong electric fields."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a solar cell?",
+    answer: "A solar cell converts light energy into electrical energy through the photovoltaic effect."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is the photovoltaic effect?",
+    answer: "The photovoltaic effect is the generation of voltage or current in a material when it absorbs light."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is an integrated circuit?",
+    answer: "An integrated circuit is an electronic circuit containing interconnected components fabricated on a semiconductor substrate."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is CMOS?",
+    answer: "CMOS is a semiconductor technology that uses complementary NMOS and PMOS transistors."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a logic gate?",
+    answer: "A logic gate performs a Boolean operation on one or more binary inputs."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are the basic logic gates?",
+    answer: "AND, OR, and NOT are fundamental logic gates."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a universal gate?",
+    answer: "NAND and NOR gates are called universal gates because any Boolean function can be constructed using only one of them."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is a semiconductor device?",
+    answer: "A semiconductor device is an electronic component whose operation depends on semiconductor materials."
+  },
+  {
+    category: "Semiconductor",
+    question: "Why is silicon widely used?",
+    answer: "Silicon is abundant, has suitable electronic properties, and forms a high-quality silicon dioxide layer useful for manufacturing."
+  },
+  {
+    category: "Semiconductor",
+    question: "What is carrier recombination?",
+    answer: "Recombination occurs when an electron and a hole combine, eliminating both mobile carriers and often releasing energy."
+  },
+  {
+    category: "Semiconductor",
+    question: "What are the applications of semiconductors?",
+    answer: "Semiconductors are used in diodes, transistors, integrated circuits, computers, communication devices, sensors, LEDs, solar cells, and power electronics."
+  },
+
+  // ==========================================
+  // 8. THERMODYNAMICS (50 Q&A)
+  // ==========================================
+  {
+    category: "Thermodynamics",
+    question: "What is thermodynamics?",
+    answer: "Thermodynamics is the study of energy, heat, work, temperature, and their relationships."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a thermodynamic system?",
+    answer: "A thermodynamic system is a specified quantity of matter or region in space selected for analysis."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What are the surroundings?",
+    answer: "The surroundings are everything outside the thermodynamic system that can interact with it."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a boundary?",
+    answer: "A boundary separates a thermodynamic system from its surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an open system?",
+    answer: "An open system can exchange both energy and mass with its surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a closed system?",
+    answer: "A closed system can exchange energy but not mass with its surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an isolated system?",
+    answer: "An isolated system ideally exchanges neither mass nor energy with its surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a thermodynamic property?",
+    answer: "A thermodynamic property is a measurable characteristic that describes the state of a system."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an intensive property?",
+    answer: "An intensive property does not depend on the amount of matter, such as temperature and pressure."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an extensive property?",
+    answer: "An extensive property depends on the amount of matter, such as mass and volume."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is thermodynamic equilibrium?",
+    answer: "A system is in thermodynamic equilibrium when it has no net tendency to change due to thermal, mechanical, chemical, or other imbalances."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a thermodynamic process?",
+    answer: "A thermodynamic process is a change from one equilibrium state to another."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a thermodynamic cycle?",
+    answer: "A thermodynamic cycle is a sequence of processes that returns a system to its initial state."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is the Zeroth Law of Thermodynamics?",
+    answer: "If two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is the First Law of Thermodynamics?",
+    answer: "The First Law expresses conservation of energy; for a closed system using the convention of work done by the system, ΔU = Q − W."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is internal energy?",
+    answer: "Internal energy is the microscopic energy associated with the particles and internal state of a system."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is heat?",
+    answer: "Heat is energy transferred because of a temperature difference."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is work in thermodynamics?",
+    answer: "Thermodynamic work is energy transfer associated with a generalized force acting through a displacement or equivalent change."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an isothermal process?",
+    answer: "An isothermal process occurs at constant temperature."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an adiabatic process?",
+    answer: "An adiabatic process has no heat transfer between the system and surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an isobaric process?",
+    answer: "An isobaric process occurs at constant pressure."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an isochoric process?",
+    answer: "An isochoric process occurs at constant volume."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a reversible process?",
+    answer: "A reversible process is an idealized process that can be reversed by infinitesimal changes without leaving net changes in the system and surroundings."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an irreversible process?",
+    answer: "An irreversible process occurs with finite gradients or dissipative effects and cannot be exactly reversed without net changes."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is entropy?",
+    answer: "Entropy is a state property related to the dispersal of energy and the number of possible microscopic arrangements."
+  },
+  {
+    category: "Thermodynamics",
+    question: "State the Second Law of Thermodynamics.",
+    answer: "The Second Law states, among equivalent formulations, that the total entropy of an isolated system cannot decrease."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is the Third Law of Thermodynamics?",
+    answer: "The Third Law states that the entropy of a perfect crystal approaches a constant minimum as temperature approaches absolute zero."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is enthalpy?",
+    answer: "Enthalpy is a thermodynamic property defined as H = U + PV."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is Gibbs free energy?",
+    answer: "Gibbs free energy is defined as G = H − TS and is useful for analyzing processes at constant temperature and pressure."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is Helmholtz free energy?",
+    answer: "Helmholtz free energy is defined as A = U − TS."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is specific heat capacity?",
+    answer: "Specific heat capacity is the heat required to raise the temperature of unit mass of a substance by one degree."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is latent heat?",
+    answer: "Latent heat is energy absorbed or released during a phase change without a temperature change."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is phase equilibrium?",
+    answer: "Phase equilibrium exists when phases coexist with no net macroscopic change between them."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is an equation of state?",
+    answer: "An equation of state relates thermodynamic variables such as pressure, volume, and temperature."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is the ideal gas law?",
+    answer: "The ideal gas law is PV = nRT."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a real gas?",
+    answer: "A real gas is a gas whose behavior deviates from the ideal gas law because of intermolecular interactions and finite molecular volume."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is the Carnot cycle?",
+    answer: "The Carnot cycle is an ideal reversible heat-engine cycle consisting of two isothermal and two adiabatic processes."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is thermal efficiency?",
+    answer: "Thermal efficiency is the ratio of net work output to heat input for a heat engine."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a heat engine?",
+    answer: "A heat engine is a device that converts heat energy into mechanical work through a thermodynamic cycle."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a refrigerator?",
+    answer: "A refrigerator is a device that transfers heat from a lower temperature reservoir to a higher temperature reservoir using work input."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a heat pump?",
+    answer: "A heat pump transfers heat from a lower temperature space to a higher temperature space to provide heating."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is COP (Coefficient of Performance)?",
+    answer: "COP is the ratio of desired heating or cooling effect to the required work input."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is throttling process?",
+    answer: "A throttling process is a steady-flow process across a restriction without work transfer and negligible heat transfer."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is Joule-Thomson effect?",
+    answer: "The Joule-Thomson effect describes the temperature change of a real gas when it expands through a valve or porous plug under adiabatic conditions."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is triple point?",
+    answer: "The triple point is the unique temperature and pressure at which solid, liquid, and gas phases coexist in equilibrium."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is critical point?",
+    answer: "The critical point is the state above which distinct liquid and gas phases do not exist."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a pure substance?",
+    answer: "A pure substance has a fixed and uniform chemical composition throughout."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is state postulate?",
+    answer: "The state postulate states that the thermodynamic state of a simple compressible system is completely specified by two independent intensive properties."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is a control volume?",
+    answer: "A control volume is a selected volume in space through which mass and energy can flow."
+  },
+  {
+    category: "Thermodynamics",
+    question: "What is exergy?",
+    answer: "Exergy is the maximum useful work obtainable from a system as it comes to equilibrium with a specified environment."
+  }
+];
+
+// Helper to normalize questions for fuzzy matching
+function normalizeText(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+}
+
+function findExactOrFuzzyMatch(userQuestion, courseCategory) {
+  const normUser = normalizeText(userQuestion);
+  if (!normUser) return null;
+
+  // 1. Try exact match in specific category first
+  for (const item of questionBank) {
+    if (courseCategory && item.category.toLowerCase().includes(courseCategory.toLowerCase())) {
+      const normQ = normalizeText(item.question);
+      if (normQ === normUser || normUser.includes(normQ) || normQ.includes(normUser)) {
+        return item;
+      }
+    }
+  }
+
+  // 2. Try global match across all categories
+  for (const item of questionBank) {
+    const normQ = normalizeText(item.question);
+    if (normQ === normUser || (normUser.length > 5 && normQ.includes(normUser)) || (normQ.length > 5 && normUser.includes(normQ))) {
+      return item;
+    }
+  }
+
+  return null;
+}
+
+module.exports = {
+  questionBank,
+  findExactOrFuzzyMatch
+};

@@ -1,5 +1,6 @@
 import { QuestionClassification } from './QuestionClassifier';
 import { ValidatedSource } from './SourceProcessor';
+import { findExactOrFuzzyMatch } from './QuestionBank';
 
 export async function generateAiEducationalAnswer(
   question: string,
@@ -63,6 +64,11 @@ function synthesizeEducationalResponse(
   sourceContextText: string,
   sourcesList: ValidatedSource[]
 ): string {
+  const matched = findExactOrFuzzyMatch(question, courseName);
+  if (matched) {
+    return `### Answer: ${matched.question}\n\n**Category:** ${matched.category}\n\n**Answer:** ${matched.answer}\n\n### Key Educational Concepts\n- Core concept in **${matched.category}**.\n- Essential for course syllabus, academic assignments, and exam preparation.\n- Practice hands-on examples and interactive roadmaps on CLARITY.`;
+  }
+
   const topic = classification.targetTopic || question;
 
   // 1. Comparison Questions
